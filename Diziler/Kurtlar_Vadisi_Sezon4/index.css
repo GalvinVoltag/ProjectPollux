@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+*{
+    margin: 0;
+    font-family: "Electrolize", sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth; /*Aşşağı ve Yukarı kaydırmalarda animasyon sağlar*/
+    scroll-padding-top: 9.25rem;
+}
+html::-webkit-scrollbar{/* "html::-webkit-scrollbar" özelliği kaydırma ekranının arka planıdır */
+    background-color: white;
+    width: 0.8rem;
+}
+html::-webkit-scrollbar-thumb{/* "html::-webkit-scrollbar-thumb" özelliği ise kaydırma çubuğunun bizzat kendisidir*/
+    background-color: red;
+    border-radius: 0.8rem;
+}
+body{
+    height: 200vh;
+}
+.body{
+    height: 200vh;
+    
+    font-family: "Electrolize", sans-serif;
+}
+.navbar{
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    color: white;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    
+}
+.sidebar{
+    height: 60rem;
+    width: 60px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    margin-top: 30px;
+}
+.sidebar i{
+    font-size: 22px;
+    cursor: pointer;
+    margin-top: 3rem;
+}
+
+.menu-list{
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+    list-style: none;
+    font-size: large;
+    margin-right: 11rem;
+    
+}
+.menu-list-item{
+    cursor: pointer;
+    font-family: "Electrolize", sans-serif;
+}
+.menu-list-item:hover{
+    
+    font-weight: bold;
+
+}
+.Logo{
+    margin-left: 3.8rem;
+    font-family: "Electrolize", sans-serif;
+    color: rgb(255, 70, 70);
+
+}
+.Profil{
+    font-size: large;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    
+}
+.resim{
+    width: 40px;
+    border-radius: 100%;
+}
+.Toogle{
+    background-color: white;
+    align-items: center;
+    display: flex;
+    width: 40px;
+    height: 20px;
+    border-radius: 20px;
+    color: goldenrod;
+    margin-right: 3rem;
+    justify-content: space-around;
+    position: relative;
+    cursor: pointer;
+    
+    
+}
+.Toogle-Ball{
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    border-radius: 100%;
+    cursor: pointer;
+    position: absolute;
+    right: 1px;
+}
+
+
+
+.Film_Ana_Sekme{
+    height: 93.5vh;
+    /*background-color: black;*/
+    background: rgb(0, 0, 0);
+    color: white;
+}
+.Movie_List_Wrapper{
+    overflow: hidden;
+    height: 50vh;
+    position: relative;
+}
+.Movie_List_Title{
+    font-size: 2rem;
+    padding-top: 5rem;
+    padding-left: 2.5rem;
+    font-weight: bold;
+    /*
+    border-bottom: 0.1rem solid transparent;
+    border-color: white;
+    */
+}
+.Movie_List{
+    list-style: none;
+    height: 300px;
+    display: flex;
+    padding-top: 2.5rem;
+    transform: translateX(0);
+    transition: 1s all ease-in-out;
+}
+.Movie_İtem{
+    position: relative;
+    /*margin-left: 2rem;*/
+    padding-right: 2.5rem;
+}
+.Movie_İtem:hover .Movie_İtem_Title,
+.Movie_İtem:hover .Movie_İtem_Buttons{
+    opacity: 1;
+}
+.Movie_İtem:hover .Movie_İtem_İmg{
+    transform: scale(1.2);
+    margin: 0 30px;
+}
+.Movie_İtem img{
+    width: 260px;
+    height: 390px;
+    object-fit: cover;
+    transition: 0.5s all ease-in-out;
+}
+.Movie_İtem_Title{
+    background-color: rgba(40, 40, 40, 0.4);
+    padding: 0 10px;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    opacity: 0;
+    transition: 0.5s all ease-in-out;
+}
+.Movie_İtem_Buttons{
+    /*background-color: rgba(40, 40, 40, 0.4);*/
+    /*padding: 0 10px;*/
+    font-weight: bold;
+    position: absolute;
+    left: 140px;
+    font-size: 35px;
+    top: 20rem;
+    opacity: 0;
+    transition: 0.5s all ease;
+    transition: 0.5s all ease-in-out;
+}
+.Movie_İtem_Buttons i:hover{
+    opacity: 1;
+    transition: 0.5s all ease;
+}
+.Movie_İtem_Buttons i{
+    cursor: pointer;
+    opacity: 0.5;
+}
+.Movie_İtem_Buttons:hover{
+    opacity: 1;
+}
+
+.arrow{
+    width: 100px;
+    display: flex;
+    font-size: 120px;
+    position: absolute;
+    right: 0;
+    top: 170px;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 0.5s ease all;
+}
+.arrow:hover{
+    opacity: 0.9;
+    
+}
+
+
+.Movie_List_Filter{
+    background-color: black;
+    padding-left: 2.5rem;
+    padding-top: 2rem;
+}
+
+.Select{
+    background-color: black;
+    color: white;
+    padding: 15px 0;
+    width: 250px;
+    font-size: 1.5rem;
+}
+
+
+
+
+
+/*https://www.youtube.com/watch?v=9H7fH9O_gc8*/
+/*https://www.youtube.com/watch?v=AO1XmKnNU-o*/
+
+
+
+
+/*Dark Mode Start*/
+.navbar.Active{
+    background-color: white;
+}
+.sidebar.Active{
+    background-color: white;
+}
+.menu-list-item.Active{
+    color: black;
+}
+.Profil-Text-Span.Active{
+    color: black;
+}
+.bi-caret-down-fill.Active{
+    color: black;
+}
+.sidebar-i.Active{
+    color: black;
+}
+.Genel-Alan.Active{
+    background-color: white;
+}
+.Popüler.Active{
+    color: black;
+}
+.One-Class.Active{
+    background-color: white;
+}
+.Select.Active{
+    background-color: white;
+    color: black;
+}
+.Toogle-Ball.Active{
+    left: 1px;
+    background-color: white;
+}
+.Toogle.Active{
+    background-color: black;
+}
+
+.Film_Ana_Sekme.Active{
+    background-color: rgb(255, 255, 255);
+}
+.BAŞLIK.Active{
+    color: black;
+}
+.Select.Active{
+    background-color: white;
+    color: black;
+}
+.Movie_List_Filter.Active{
+    background-color: white;
+}
+/*Dark Mode End*/

@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film Projesi</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css    ">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    
+
+</head>
+
+<body>
+    <div id="headermain" class="navbar">
+        <script>
+            window.onload = ready;
+            function ready(){
+                fetch("../header.shtml").then((res) => res.text()).then((text) => {
+                    document.querySelector("#headermain").innerHTML = text;
+                }).catch((e) => console.error(e));}
+        </script>
+    </div>
+    <div style="background-color: black; color: white;" >
+        <div class="movie_list_container">
+            <p class="Movie_List_Title BAŞLIK Hilmi3">POPÜLER</p>
+            <div class="Movie_List_Wrapper">
+                <ul class="Movie_List">
+                    <li class="Movie_İtem Hilmi4">
+                        <img src="fotolar/Recep_İvedik_3.jpeg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title">Recep İvedik 3</span>
+                            <div class="Movie_İtem_Buttons Recep_İvedik_Button">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi5">
+                        <img src="fotolar/MV5BMTQ4MzQzMzM2Nl5BMl5BanBnXkFtZTgwMTQ1NzU3MDI@._V1_FMjpg_UX1000_.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 3rem;">Dangal</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi6">
+                        <img src="fotolar/Kurtlar_Vadisi_Irak.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title">Kurtlar Vadisi Irak</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi7">
+                        <img src="fotolar/SK-Yayın-Posteri.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title">Esaretin Bedeli</span>
+                            <div class="Movie_İtem_Buttons EsaretinBedeli">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi8">
+                        <img src="fotolar/wi_800.png" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 3rem;">3 IDIOT</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi9">
+                        <img src="fotolar/unnamed.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 3rem;">TİTANİK</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi10">
+                        <img src="fotolar/YesilYol.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 1rem;">YEŞİL YOL</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem">
+                        <img src="fotolar/BABA.jpeg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 3rem;">BABA</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem">
+                        <img src="fotolar/DÖVÜŞ.jpeg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title">DÖVÜŞ KULÜBÜ</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem">
+                        <img src="fotolar/free.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title">Gerçek Kahraman</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <i class="bi bi-chevron-right arrow"></i>
+            </div>
+        </div>
+
+        <div class="movie_list_container AKSİYON">
+            <p class="Movie_List_Title BAŞLIK Hilmi4">AKSİYON VE MACERA</p>
+            <div class="Movie_List_Wrapper">
+                <ul class="Movie_List">
+                    <li class="Movie_İtem Hilmi5">
+                        <img src="fotolar/Dağ_II_film_afişi.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 3.5rem;">Dağ 2</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi6">
+                        <img src="fotolar/18598.webp" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title">Er Ryan Kurtarmak</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi7">
+                        <img src="fotolar/19771364.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title">Karayip Korsanları</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi8">
+                        <img src="fotolar/türkler.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title">Türkler Geliyor</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi9">
+                        <img src="fotolar/nefes.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 3.5rem;">Nefes</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi10">
+                        <img src="fotolar/hızlı.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title">Hızlı Ve Öfkeli</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi11">
+                        <img src="fotolar/gladyo.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 2rem;">Gladyatör</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem">
+                        <img src="fotolar/Kara_Şövalye_TR_film_afişi.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 1rem;">Kara Şövalye</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem">
+                        <img src="fotolar/trans.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 1rem;">Transformers</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem">
+                        <img src="fotolar/SCARFDACE.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 1rem;">YARALI YÜZ</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <i class="bi bi-chevron-right arrow"></i>
+            </div>
+        </div>
+
+        <div class="movie_list_container KOMEDİ">
+            <p class="Movie_List_Title BAŞLIK Hilmi1">KOMEDİ</p>
+            <div class="Movie_List_Wrapper">
+                <ul class="Movie_List">
+                    <li class="Movie_İtem Hilmi2">
+                        <img src="fotolar/recep.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title">Recep İvedik 2</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi3">
+                        <img src="fotolar/Kolpacino-bomba.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title">Kolpaçino Bomba</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi4">
+                        <img src="fotolar/Gora_afiş.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 3rem;">G.O.R.A</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi5">
+                        <img src="fotolar/Arog.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 3rem;">A.R.O.G</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi6">
+                        <img src="fotolar/küçükadam.webp" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 1rem;">Küçük Adam</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi7">
+                        <img src="fotolar/Hababam-sinifi.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title">Hababam Sınıfı</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi8">
+                        <img src="fotolar/bebek.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title">Bebek Firarda</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem">
+                        <img src="fotolar/Türkler_çıldırmış_olmalı.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-right: 4rem;">Türkler Çıldırmış Olmalı</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem">
+                        <img src="fotolar/hükümet.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title">Hükümet Kadın</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem">
+                        <img src="fotolar/Hep_Yek_afiş.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 2.5rem;">Hep Yek</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <i class="bi bi-chevron-right arrow"></i>
+            </div>
+        </div>
+
+        <div class="movie_list_container DRAM">
+            <p class="Movie_List_Title BAŞLIK Hilmi1">DRAM</p>
+            <div class="Movie_List_Wrapper">
+                <ul class="Movie_List">
+                    <li class="Movie_İtem Hilmi2">
+                        <img src="fotolar/Koğuş.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-right: 4rem;">7. Koğuştaki Mucize</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi3">
+                        <img src="fotolar/ayla.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 4rem;">Ayla</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi4">
+                        <img src="fotolar/Canim_kardesim.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title">Canım Kardeşim</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi5">
+                        <img src="fotolar/listersi.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title">Schindler'in Listesi</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi6">
+                        <img src="fotolar/pianist.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 3rem;">Piyanist</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi7">
+                        <img src="fotolar/aile_serefi.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 2rem;">Aile Şerefi</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi8">
+                        <img src="fotolar/up.webp" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 2rem;">Yukarı Bak</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem">
+                        <img src="fotolar/Anayurt_Oteli_Ömer_Kavur_1996_afiş.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 2rem;">Anayurt Oteli</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem">
+                        <img src="fotolar/yaşamkıyısı.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title">Yaşamın Kıyısında</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem">
+                        <img src="fotolar/Teslimiyet_film_kapağı.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 1rem;">Teslimiyet</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <i class="bi bi-chevron-right arrow"></i>
+            </div>
+        </div>
+
+        <div class="movie_list_container BİLİM_KURGU">
+            <p class="Movie_List_Title BAŞLIK Hilmi1">BİLİM KURGU</p>
+            <div class="Movie_List_Wrapper">
+                <ul class="Movie_List">
+                    <li class="Movie_İtem Hilmi2">
+                        <img src="fotolar/börü.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 2rem;">Börü 2039</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi3">
+                        <img src="fotolar/dune.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 3rem;">Dune</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi4">
+                        <img src="fotolar/tenet.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 3rem;">Tenet</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi5">
+                        <img src="fotolar/Yerçekimi_-_poster.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 1rem;">Yerçekimi</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi6">
+                        <img src="fotolar/yıldızlararası.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 1rem;">Yıldızlar Arası</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi7">
+                        <img src="fotolar/matrix.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 3rem;">Matrix</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi8">
+                        <img src="fotolar/Eski_Makine.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 1.5rem;">Eski Makine</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem">
+                        <img src="fotolar/başlangıç.png" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 2rem;">Başlangıç</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem">
+                        <img src="fotolar/yarınınsınırı.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title">Yarının Sınırında</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem">
+                        <img src="fotolar/Bir_Uzay_Destanı.jpeg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title">Bir Uzay Destanı</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <i class="bi bi-chevron-right arrow"></i>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="index1.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+
+const Top=document.querySelector(".Toogle");
+const İtems=document.querySelectorAll(".navbar,.sidebar,.menu-list-item,.Profil-Text-Span,.bi-caret-down-fill,.sidebar-i,.Genel-Alan,.Popüler,.One-Class,.Select,.Toogle-Ball,.Toogle");
+
+Top.addEventListener("click",function(){
+    İtems.forEach((items)=>items.classList.toggle("Active"))
+})
+
+
+ScrollReveal().reveal('.Hilmi' ,{delay:60});
+ScrollReveal().reveal('.Hilmi1' ,{delay:200});
+ScrollReveal().reveal('.Hilmi2' ,{delay:300});
+ScrollReveal().reveal('.Hilmi3' ,{delay:350});
+ScrollReveal().reveal('.Hilmi4' ,{delay:400});
+ScrollReveal().reveal('.Hilmi5' ,{delay:450});
+ScrollReveal().reveal('.Hilmi6' ,{delay:500});
+ScrollReveal().reveal('.Hilmi7' ,{delay:550});
+ScrollReveal().reveal('.Hilmi8' ,{delay:600});
+ScrollReveal().reveal('.Hilmi9' ,{delay:650});
+ScrollReveal().reveal('.Hilmi10' ,{delay:700});
+ScrollReveal().reveal('.Hilmi11' ,{delay:750});
+
+
+
+
+
+
+</script>
+
+</html>

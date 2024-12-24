@@ -1,0 +1,21 @@
+    <div class="Logo Hilmi">
+        <h1>DiziFilmHD</h1>
+    </div>
+
+    <div class="Linkler Hilmi1">
+        <ul class="menu-list">
+            <a href="../index.html" class="menu-list-item">Ana Sayfa</a>
+            <a href="../Filmler/index.html" class="menu-list-item ">Filmler</a>
+            <a href="../Diziler/index.html" class="menu-list-item ">Diziler</a>
+            <a href="../Hakkında/index.html" class="menu-list-item ">Hakkında</a>
+        </ul>
+    </div>
+    
+    <div class="Profil Hilmi2"> 
+        <a href="../Giriş_Kayıt/index.html" class="menu-list-item">Giriş/Kayıt</a>
+        <div class="Toogle" onclick="theme()">
+            <i class="bi bi-moon-fill"></i>
+            <i class="bi bi-brightness-low-fill"></i>
+            <div class="Toogle-Ball"></div>
+        </div>
+    </div>

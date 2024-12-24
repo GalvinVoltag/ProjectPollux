@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film Projesi</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css    ">
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+</head>
+
+<body style="background-color: black; overflow: hidden; ">
+
+    <div id="headermain" class="navbar">
+        <script>
+            window.onload = ready;
+            function ready(){
+                fetch("header.shtml").then((res) => res.text()).then((text) => {
+                    document.querySelector("#headermain").innerHTML = text;
+                }).catch((e) => console.error(e));}
+        </script>
+    </div>
+
+    <div class="Ana_Sayfa" >
+        <div class="Ana_Resim">
+            <div class="Film_Yazı">
+                <h1 id="title" class="Recep_İvedik Hilmi2" style="color:white">RECEP İVEDİK 3</h1>
+                <p class="lorem Hilmi3" style="color:white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque deserunt eligendi corporis dignissimos doloribus minima, exercitationem eveniet perferendis iure nostrum, quaerat veritatis. Soluta nostrum eveniet, quod magni porro libero inventore.</p>
+                <div class="iconlar Hilmi4" style="font-size: 1.1rem;">
+                    <p id="genre" class="Tarihvezaman" style="color: #7fffd4;">Komedi</p>
+                    <p id="year" class="Tarihvezaman Tarihvezaman1" style="color:white">2010</p>
+                    <div class="İmdb">
+                        <img src="fotolar/imdb.png" alt="">
+                        <div class="imdb_yıldız" style="color:white">
+                            <i class="bi bi-star-fill"></i>
+                            <p id="rating" style="margin-left: 0.1rem;">4.2</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <button class="btn_ripple Hilmi5">
+                    <i class="fa fa-play"></i>
+                </button>
+            </div>
+            <div class="Card">
+                <!-- <div class="Hilmi6 Card1 Cardlar " style="background: url(fotolar/Recep_İvedik_3.jpeg);"></div> -->
+                <button disabled id="1" class="CardBtn" type="button" onclick="ActBtn('1', 'fotolar/Recep.mp4', 'RECEP İVEDİK')">
+                    <img src="fotolar/Recep_İvedik_3.jpeg" class="Hilmi6 Cards CardsAct "></img>
+                </button>
+
+                <button id="2" class="CardBtn" type="button" onclick="ActBtn('2', 'fotolar/Kurtlar Vadisi Irak.mp4')">
+                    <img src="fotolar/Kurtlar_Vadisi_Irak.jpg" class="Hilmi6 Cards"></img>
+                </button>
+
+                <button id="3" class="CardBtn" type="button"  onclick="ActBtn('3', 'fotolar/Öyle bir geçer zaman ki.mp4', 'ÖYLE BİR GEÇER ZAMAN Kİ')">
+                    <img src="fotolar/öyle.jpg" class="Hilmi6 Cards"></img>
+                </button>
+
+                <button id="4" class="CardBtn" type="button" onclick="ActBtn('4', 'fotolar/Titanic.mp4')">
+                    <img src="fotolar/unnamed.jpg" class="Hilmi6 Cards"></img>
+                </button>
+
+                <button id="5" class="CardBtn" type="button" onclick="ActBtn('5', 'fotolar/Esaretin_bedeli.mp4')">    
+                    <img src="fotolar/SK-Yayın-Posteri.jpg" class="Hilmi6 Cards"></img>
+                </button>
+            </div>
+            <video id="Mov" class="video-bg" autoplay muted loop>
+                <source class="Hilmi11" src="fotolar/Recep.mp4" type="video/mp4">
+            </video>
+        </div>
+        <!--https://www.fullhdfilmizlesene.de/film/perde-arkasi-hope-solo-nun-futbol-kariyeri-untold-hope-solo-vs-us-soccer/-->
+        <!--https://www.youtube.com/watch?v=WgeyaRn5tck-->
+    </div>
+</body>
+
+<script>
+
+const Top=document.querySelector(".Toogle");
+const İtems=document.querySelectorAll(".navbar,.sidebar,.menu-list-item,.Profil-Text-Span,.bi-caret-down-fill,.sidebar-i,.Genel-Alan,.Popüler,.One-Class,.Select,.Toogle-Ball,.Toogle");
+
+function theme() {
+    İtems.forEach((items)=>items.classList.toggle("Active"));
+    document.querySelectorAll(".menu-list-item, .Toggle-Ball").forEach((items)=>items.classList.toggle("Active"));
+}
+
+function ActBtn(idx, sourcename, title = "TITLE") {
+    var allcards = document.querySelectorAll(".CardBtn");
+    for (var i=0; i<allcards.length; i++) {
+        if (allcards[i].id != idx) 
+            allcards[i].removeAttribute("disabled");
+        else
+            allcards[i].disabled = true;
+    }
+    // alert(data[1]);
+    fetch("Database/Data.json")
+    .then((res) => res.text())
+    .then((text) => {
+        var index = parseInt(idx) - 1;
+        var parsed = JSON.parse(text);
+        document.querySelector('#Mov').src = parsed[index].Trailer;
+        document.querySelector("#title").innerHTML = parsed[index].Title;
+        document.querySelector('#year').innerHTML = parsed[index].Year;
+        document.querySelector('#genre').innerHTML = parsed[index].Genre;
+        document.querySelector('#rating').innerHTML = parsed[index].Rating;
+    })
+    .catch((e) => console.error(e));
+    var thetits = document.querySelector('.Film_Yazı');
+    thetits.classList.remove("Film_Yazı");
+    void thetits.offsetWidth;
+    thetits.classList.add("Film_Yazı");
+
+}
+
+Top.addEventListener("click",function(){
+    İtems.forEach((items)=>items.classList.toggle("Active"))
+})
+
+document.querySelector(".btn_ripple").addEventListener("click",function(){
+    window.location.href="http://127.0.0.1:5500/Filmler/Recep_%C4%B0vedik_3/index.html"
+})
+document.querySelector(".Card2").addEventListener("click",function(){
+    window.location.href="http://127.0.0.1:5500/Ana_Sayfa/Kurtlar_Vadisi_Irak/index.html"
+})
+document.querySelector(".Card3").addEventListener("click",function(){
+    window.location.href="http://127.0.0.1:5500/Ana_Sayfa/%C3%96yle_Bir_Ge%C3%A7er_Zaman_Ki/index.html"
+})
+document.querySelector(".Card4").addEventListener("click",function(){
+    window.location.href="http://127.0.0.1:5500/Ana_Sayfa/Titanic/index.html"
+})
+document.querySelector(".Card5").addEventListener("click",function(){
+    window.location.href="http://127.0.0.1:5500/Ana_Sayfa/Esaretin_Bedeli/index.html"
+})
+
+document.querySelector(".Ana_Sayfa").addEventListener("click",function(){
+    window.location.href="http://127.0.0.1:5500/index.html"
+})
+document.querySelector(".Filmler").addEventListener("click",function(){
+    window.location.href="http://127.0.0.1:5500/Filmler/index.html"
+})
+document.querySelector(".Diziler").addEventListener("click",function(){
+    window.location.href="http://127.0.0.1:5500/Diziler/index.html"
+})
+document.querySelector(".Hakkında").addEventListener("click",function(){
+    window.location.href="http://127.0.0.1:5500/Hakk%C4%B1nda/index.html"
+})
+document.querySelector(".Giriş_Kayıt").addEventListener("click",function(){
+    window.location.href="http://127.0.0.1:5500/Giri%C5%9F_Kay%C4%B1t/index.html"
+})
+
+ScrollReveal().reveal('.Hilmi' ,{delay:60});
+ScrollReveal().reveal('.Hilmi1' ,{delay:200});
+ScrollReveal().reveal('.Hilmi2' ,{delay:300});
+ScrollReveal().reveal('.Hilmi3' ,{delay:350});
+ScrollReveal().reveal('.Hilmi4' ,{delay:400});
+ScrollReveal().reveal('.Hilmi5' ,{delay:450});
+ScrollReveal().reveal('.Hilmi6' ,{delay:500});
+ScrollReveal().reveal('.Hilmi7' ,{delay:550});
+ScrollReveal().reveal('.Hilmi8' ,{delay:600});
+ScrollReveal().reveal('.Hilmi9' ,{delay:650});
+ScrollReveal().reveal('.Hilmi10' ,{delay:700});
+ScrollReveal().reveal('.Hilmi11' ,{delay:750});
+
+</script>
+
+</html>

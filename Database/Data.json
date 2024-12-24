@@ -1,0 +1,63 @@
+[
+    {
+        "ID": "Recep",
+        "Title": "RECEP İVEDİK 3",
+        "Trailer": "fotolar/Recep.mp4",
+        "Genre": "Komedi",
+        "Year": "2010",
+        "Rating": "4.2",
+        "Comments": [
+            {
+                "ID": 0,
+                "host": "Bumbum",
+                "content": "Cok ii, ben turk guzel sevdi :D",
+                "likes": 0,
+                "dislikes": 66
+            }
+        ]
+    },
+    {
+        "ID": "Kurtlar",
+        "Title": "KURTLAR VADİSİ IRAK",
+        "Trailer": "fotolar/Kurtlar Vadisi Irak.mp4",
+        "Genre": "Aksiyon",
+        "Year": "2006",
+        "Rating": "5.7",
+        "Comments": [
+            
+        ]
+    },
+    {
+        "ID": "Oyle",
+        "Title": "ÖYLE BİR GEÇER ZAMAN Kİ",
+        "Trailer": "fotolar/Öyle bir geçer zaman ki.mp4",
+        "Genre": "Dram",
+        "Year": "2010",
+        "Rating": "7.0",
+        "Comments": [
+            
+        ]
+    },
+    {
+        "ID": "Titanic",
+        "Title": "TİTANİK",
+        "Trailer": "fotolar/Titanic.mp4",
+        "Genre": "Dram",
+        "Year": "1997",
+        "Rating": "7.9",
+        "Comments": [
+            
+        ]
+    },
+    {
+        "ID": "Esaret",
+        "Title": "ESARETİN BEDELİ",
+        "Trailer": "fotolar/Esaretin_bedeli.mp4",
+        "Genre": "Dram",
+        "Year": "1994",
+        "Rating": "9.3",
+        "Comments": [
+            
+        ]
+    }
+]

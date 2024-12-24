@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film Projesi</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css    ">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+
+</head>
+
+<body>
+
+    <div class="navbar ">
+        <div class="Logo Hilmi">
+            <h1>DiziFilmHD</h1>
+        </div>
+        <div class="Linkler Hilmi1">
+            <ul class="menu-list">
+                <li class="menu-list-item Ana_Sayfa">Ana Sayfa</li>
+                <li class="menu-list-item Filmler">Filmler</li>
+                <li class="menu-list-item Diziler">Diziler</li>
+                <li class="menu-list-item Hakkında">Hakkında</li>
+            </ul>
+        </div>
+        <div class="Profil Hilmi2">   
+            <span class="menu-list-item Giriş_Kayıt">Giriş/Kayıt</span>
+            <div class="Toogle">
+                <i class="bi bi-moon-fill"></i>
+                <i class="bi bi-brightness-low-fill"></i>
+                <div class="Toogle-Ball"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+
+    <!--
+    <div class="Movie_List_Filter ">
+        <select class="Select Hilmi3">
+            <option value="http://127.0.0.1:5500/Diziler/Kurtlar_Vadisi_Sezon1/index.html" class="Yazılar Sezon_bir">Sezon 1</option>
+            <option value="http://127.0.0.1:5500/Diziler/Kurtlar_Vadisi_Sezon2/index.html" class="Yazılar Sezon_iki">Sezon 2</option>
+            <option class="Yazılar Sezon_üç">Sezon 3</option>
+            <option class="Yazılar Sezon_dört">Sezon 4</option>
+        </select>
+    </div>
+    -->
+    
+    <div class="Film_Ana_Sekme" >
+
+        <div>
+            <button style="margin-top: 2rem; margin-left: 3rem; " type="button" class="Sezon_bir btn btn-secondary btn-lg">Sezon 1</button>
+            <button style="margin-top: 2rem; margin-left: 1.5rem; color: black; background-color: white;" type="button" class="Sezon_iki btn btn-secondary btn-lg">Sezon 2</button>
+            
+        </div>
+        
+        <div class="movie_list_container">
+            <p class="Movie_List_Title BAŞLIK Hilmi3">Ezel 33-42</p>
+            <div class="Movie_List_Wrapper">
+                <ul class="Movie_List">
+                    <li class="Movie_İtem Hilmi4">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title">33.Bölüm</span>
+                            <div class="Movie_İtem_Buttons Bölüm_1_Vadi">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi5">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 4rem;">34.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi6">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-right: 4.5rem;">35.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi7">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 3rem";>36.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi8">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 2.5rem";>37.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi9">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 1.5rem";>38.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi10">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title">39.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 2.8rem";>40.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 1.5rem";>41.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 3.5rem";>42.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <i class="bi bi-chevron-right arrow"></i>
+            </div>
+        </div>
+
+        <div class="movie_list_container AKSİYON">
+            <p class="Movie_List_Title BAŞLIK Hilmi4">Ezel 43-52</p>
+            <div class="Movie_List_Wrapper">
+                <ul class="Movie_List">
+                    <li class="Movie_İtem Hilmi5">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-right: 5rem;">43.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi6">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 3rem;">44.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi7">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 4rem;">45.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi8">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title">46.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi9">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 2rem;">47.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi10">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 1rem;">48.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi11">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title">49.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 1rem;">50.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title">51.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 3rem;">52.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <i class="bi bi-chevron-right arrow"></i>
+            </div>
+        </div>
+
+        <div class="movie_list_container AKSİYON">
+            <p class="Movie_List_Title BAŞLIK Hilmi4">Ezel 53-62</p>
+            <div class="Movie_List_Wrapper">
+                <ul class="Movie_List">
+                    <li class="Movie_İtem Hilmi5">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-right: 5rem;">53.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi6">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 3rem;">54.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi7">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 4rem;">55.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi8">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title">56.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi9">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 2rem;">57.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi10">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 1rem;">58.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi11">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title">59.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 1rem;">60.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title">61.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 3rem;">62.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <i class="bi bi-chevron-right arrow"></i>
+            </div>
+        </div>
+
+        <div class="movie_list_container AKSİYON">
+            <p class="Movie_List_Title BAŞLIK Hilmi4">Ezel 63-72</p>
+            <div class="Movie_List_Wrapper">
+                <ul class="Movie_List">
+                    <li class="Movie_İtem Hilmi5">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-right: 5rem;">63.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi6">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 3rem;">64.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi7">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 4rem;">65.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi7">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 4rem;">66.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi7">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 4rem;">67.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi7">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 4rem;">68.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi7">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 4rem;">69.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi7">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 4rem;">70.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi7">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 4rem;">71.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi7">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 4rem;">72.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    
+                </ul>
+                
+            </div>
+        </div>
+
+        <div class="movie_list_container AKSİYON">
+            <p class="Movie_List_Title BAŞLIK Hilmi4">Ezel 73-79</p>
+            <div class="Movie_List_Wrapper">
+                <ul class="Movie_List">
+                    <li class="Movie_İtem Hilmi5">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-right: 5rem;">73.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi6">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 3rem;">74.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi7">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 4rem;">75.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi7">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 4rem;">76.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi7">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 4rem;">77.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi7">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 4rem;">78.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="Movie_İtem Hilmi7">
+                        <img src="/Diziler/Ezel/Ezel_Sezon_1/fotolar/Ezel.jpg" class="Movie_İtem_İmg">
+                        <div class="Movie_İtem_İnfo">
+                            <span class="Movie_İtem_Title" style="margin-left: 4rem;">79.Bölüm</span>
+                            <div class="Movie_İtem_Buttons">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    
+
+                    
+                </ul>
+                
+            </div>
+        </div>
+
+
+    </div>
+</body>
+<script src="index1.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+
+const Top=document.querySelector(".Toogle");
+const İtems=document.querySelectorAll(".navbar,.sidebar,.menu-list-item,.Profil-Text-Span,.bi-caret-down-fill,.sidebar-i,.Genel-Alan,.Popüler,.One-Class,.Select,.Toogle-Ball,.Toogle");
+
+Top.addEventListener("click",function(){
+    İtems.forEach((items)=>items.classList.toggle("Active"))
+})
+
+
+ScrollReveal().reveal('.Hilmi' ,{delay:60});
+ScrollReveal().reveal('.Hilmi1' ,{delay:200});
+ScrollReveal().reveal('.Hilmi2' ,{delay:300});
+ScrollReveal().reveal('.Hilmi3' ,{delay:350});
+ScrollReveal().reveal('.Hilmi4' ,{delay:400});
+ScrollReveal().reveal('.Hilmi5' ,{delay:450});
+ScrollReveal().reveal('.Hilmi6' ,{delay:500});
+ScrollReveal().reveal('.Hilmi7' ,{delay:550});
+ScrollReveal().reveal('.Hilmi8' ,{delay:600});
+ScrollReveal().reveal('.Hilmi9' ,{delay:650});
+ScrollReveal().reveal('.Hilmi10' ,{delay:700});
+ScrollReveal().reveal('.Hilmi11' ,{delay:750});
+
+
+
+
+
+
+</script>
+
+</html>

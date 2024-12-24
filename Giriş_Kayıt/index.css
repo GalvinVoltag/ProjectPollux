@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Playwrite+BE+WAL:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Playwrite+BE+WAL:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Electrolize", sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth; /*Aşşağı ve Yukarı kaydırmalarda animasyon sağlar*/
+    scroll-padding-top: 9.25rem;
+}
+html::-webkit-scrollbar{/* "html::-webkit-scrollbar" özelliği kaydırma ekranının arka planıdır */
+    background-color: white;
+    width: 0.8rem;
+}
+html::-webkit-scrollbar-thumb{/* "html::-webkit-scrollbar-thumb" özelliği ise kaydırma çubuğunun bizzat kendisidir*/
+    background-color: red;
+    border-radius: 0.8rem;
+}
+
+.wrapper{
+    width: 420px;
+    
+    /*height: 500px;*/
+    color: #fff;
+    background: transparent;
+    border-radius: 10px;
+    padding: 30px 40px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    margin-left: 77vh;
+    margin-top: 25vh;
+    /*
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    */
+}
+.wrapper h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder{
+    color: #fff;
+
+}
+.input-box i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.wrapper .btn{
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.wrapper .register-link{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link p a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+
+body{
+    
+    font-family: "Electrolize", sans-serif;
+    background: url(/Giriş_Kayıt/fotolar/filmkolaj.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    color: white;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    
+}
+.sidebar{
+    height: 60rem;
+    width: 60px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    margin-top: 30px;
+}
+.sidebar i{
+    font-size: 22px;
+    cursor: pointer;
+    margin-top: 3rem;
+}
+
+.menu-list{
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+    list-style: none;
+    font-size: large;
+    margin-right: 11rem;
+    
+}
+.menu-list-item{
+    cursor: pointer;
+    font-family: "Electrolize", sans-serif;
+}
+.menu-list-item:hover{
+    
+    font-weight: bold;
+
+}
+.Logo{
+    margin-left: 3.8rem;
+    font-family: "Electrolize", sans-serif;
+    color: rgb(255, 70, 70);
+
+}
+.SosyalMedya{
+    font-size: 2.5rem;
+    margin-left: 3%;
+    padding-top: 2.5rem;
+}
+.SosyalMedya i{
+    padding-right: 1rem;
+    cursor: pointer;
+}
+.SosyalMedya i:hover{
+    opacity: 0.8;
+}
+.Profil{
+    font-size: large;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    
+}
+.resim{
+    width: 40px;
+    border-radius: 100%;
+}
+.Toogle{
+    background-color: white;
+    align-items: center;
+    display: flex;
+    width: 40px;
+    height: 20px;
+    border-radius: 20px;
+    color: goldenrod;
+    margin-right: 3rem;
+    justify-content: space-around;
+    position: relative;
+    cursor: pointer;
+    
+    
+}
+.Toogle-Ball{
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    border-radius: 100%;
+    cursor: pointer;
+    position: absolute;
+    right: 1px;
+}
+
+
+
+.Ana_Sekme{
+    height: 93.5vh;
+    background-color: gray;
+    
+}
+.Hakkında_Üst{
+    padding-top: 2.5rem;
+}
+.Hakkında{
+    height: 85vh;
+    width: 108rem;
+    background-color: white;
+    margin-left: 5%;
+}
+
+.Hakkında1{
+    font-family: "Bakbak One", sans-serif;
+    font-size: 4rem;
+    margin-left: 2.9%;
+    padding-top: 2rem;
+}
+
+
+
+
+
+
+/*https://www.youtube.com/watch?v=9H7fH9O_gc8*/
+/*https://www.youtube.com/watch?v=AO1XmKnNU-o*/
+
+
+
+
+/*Dark Mode Start*/
+.navbar.Active{
+    background-color: white;
+}
+.sidebar.Active{
+    background-color: white;
+}
+.menu-list-item.Active{
+    color: black;
+}
+.Profil-Text-Span.Active{
+    color: black;
+}
+.bi-caret-down-fill.Active{
+    color: black;
+}
+.sidebar-i.Active{
+    color: black;
+}
+.Genel-Alan.Active{
+    background-color: white;
+}
+.Popüler.Active{
+    color: black;
+}
+.One-Class.Active{
+    background-color: white;
+}
+.Select.Active{
+    background-color: white;
+    color: black;
+}
+.Toogle-Ball.Active{
+    left: 1px;
+    background-color: white;
+}
+.Toogle.Active{
+    background-color: black;
+}
+
+.Film_Ana_Sekme.Active{
+    background-color: rgb(255, 255, 255);
+}
+.BAŞLIK.Active{
+    color: black;
+}
+/*Dark Mode End*/

@@ -1,0 +1,19 @@
+[
+    {
+        "Hesap_isim": "Bumbum",
+        "Sifre": "1234",
+        "Likes": [
+            "RecepI"
+        ],
+        "Dislike": [
+            "KVI"
+        ],
+        "comments": [
+            {
+                "ID": 0,
+                "Spoiler": false,
+                "Film": "Recep"
+            }
+        ]
+    }
+]
