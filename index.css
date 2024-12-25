@@ -6,11 +6,108 @@
     font-family: "Electrolize", sans-serif;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth; /*Aşşağı ve Yukarı kaydırmalarda animasyon sağlar*/
+    scroll-padding-top: 9.25rem;
+}
+html::-webkit-scrollbar{/* "html::-webkit-scrollbar" özelliği kaydırma ekranının arka planıdır */
+    background-color: white;
+    width: 0.8rem;
+}
+html::-webkit-scrollbar-thumb{/* "html::-webkit-scrollbar-thumb" özelliği ise kaydırma çubuğunun bizzat kendisidir*/
+    background-color: red;
+    border-radius: 0.8rem;
+}
 
+.wrapper{
+    width: 420px;
+    
+    /*height: 500px;*/
+    color: #fff;
+    background: transparent;
+    border-radius: 10px;
+    padding: 30px 40px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    margin-left: 77vh;
+    margin-top: 25vh;
+    /*
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    */
+}
+.wrapper h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder{
+    color: #fff;
+
+}
+.input-box i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.wrapper .btn{
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.wrapper .register-link{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link p a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
 .body{
     height: 200vh;
     
     font-family: "Electrolize", sans-serif;
+    background: url(/Giriş_Kayıt/fotolar/filmkolaj.jpg);
+    background-size: cover;
+    background-position: center;
 }
 .navbar{
     width: 100%;
@@ -24,6 +121,7 @@
     position: sticky;
     top: 0;
     animation: changetitle 0.5s;
+    z-index: 10;
 }
 .sidebar{
     height: 60rem;
@@ -56,7 +154,6 @@
     cursor: pointer;
     font-family: "Electrolize", sans-serif;
     text-decoration: none;
-    color: white;
 }
 .Active{
     color: black !important;
@@ -72,6 +169,18 @@
     font-family: "Electrolize", sans-serif;
     color: rgb(255, 70, 70);
 
+}
+.SosyalMedya{
+    font-size: 2.5rem;
+    margin-left: 3%;
+    padding-top: 2.5rem;
+}
+.SosyalMedya i{
+    padding-right: 1rem;
+    cursor: pointer;
+}
+.SosyalMedya i:hover{
+    opacity: 0.8;
 }
 .Profil{
     font-size: large;
@@ -97,7 +206,7 @@
     position: relative;
     cursor: pointer;
 }
-.Toogle-Ball{
+.Toggle-Ball {
     width: 18px;
     height: 18px;
     background-color: black;
@@ -105,6 +214,9 @@
     cursor: pointer;
     position: absolute;
     right: 1px;
+}
+.On {
+    left: 1px;
 }
 
 
@@ -143,6 +255,88 @@
 .Recep_İvedik{
     font-size: 4rem;
     font-weight: bold;
+}
+.Film_Ana_Sekme{
+    height: 320vh;
+    /*background-color: black;*/
+    background: rgb(0, 0, 0);
+    color: white;
+}
+.Movie_List_Wrapper{
+    overflow: hidden;
+    height: 50vh;
+    position: relative;
+}
+.Movie_List_Title{
+    font-size: 2rem;
+    padding-top: 5rem;
+    padding-left: 2.5rem;
+    font-weight: bold;
+    /*
+    border-bottom: 0.1rem solid transparent;
+    border-color: white;
+    */
+}
+.Movie_List{
+    list-style: none;
+    height: 300px;
+    display: flex;
+    padding-top: 2.5rem;
+    transform: translateX(0);
+    transition: 1s all ease-in-out;
+}
+.Movie_İtem{
+    position: relative;
+    /*margin-left: 2rem;*/
+    padding-right: 2.5rem;
+}
+.Movie_İtem:hover .Movie_İtem_Title,
+.Movie_İtem:hover .Movie_İtem_Buttons{
+    opacity: 1;
+}
+.Movie_İtem:hover .Movie_İtem_İmg{
+    transform: scale(1.2);
+    margin: 0 30px;
+}
+.Movie_İtem img{
+    width: 260px;
+    height: 390px;
+    object-fit: cover;
+    transition: 0.5s all ease-in-out;
+}
+.Movie_İtem_Title{
+    background-color: rgba(40, 40, 40, 0.4);
+    padding: 0 10px;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    opacity: 0;
+    transition: 0.5s all ease-in-out;
+}
+.Movie_İtem_Buttons{
+    /*background-color: rgba(40, 40, 40, 0.4);*/
+    /*padding: 0 10px;*/
+    font-weight: bold;
+    position: absolute;
+    left: 140px;
+    font-size: 35px;
+    top: 20rem;
+    opacity: 0;
+    transition: 0.5s all ease;
+    transition: 0.5s all ease-in-out;
+}
+.Movie_İtem_Buttons i:hover{
+    opacity: 1;
+    transition: 0.5s all ease;
+}
+.Movie_İtem_Buttons i{
+    cursor: pointer;
+    opacity: 0.5;
+}
+.Movie_İtem_Buttons:hover{
+    opacity: 1;
 }
 .Cards {
     width: 10rem;
@@ -231,6 +425,42 @@
     animation-iteration-count: infinite;
     animation-fill-mode: both;
 }
+.Ana_Sekme{
+    height: 93.5vh;
+    background-color: gray;
+    
+}
+.Hakkında_Üst{
+    padding-top: 2.5rem;
+}
+.Hakkında{
+    height: 85vh;
+    width: 108rem;
+    background-color: white;
+    margin-left: 5%;
+}
+
+.Hakkında1{
+    font-family: "Bakbak One", sans-serif;
+    font-size: 4rem;
+    margin-left: 2.9%;
+    padding-top: 2rem;
+}
+.arrow{
+    width: 100px;
+    display: flex;
+    font-size: 120px;
+    position: absolute;
+    right: 0;
+    top: 170px;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 0.5s ease all;
+}
+.arrow:hover{
+    opacity: 0.9;
+    
+}
 .btn_ripple:hover{
     opacity: 0.9;
 }
@@ -259,30 +489,25 @@
 
 
 
+/* REAL DARK MORE, BITCH!!! */
+.Dark {
+    background-color: rgb(20, 20, 20);
+    color: rgb(242, 242, 242);
+    transition: 0.7s;
+}
+.Light {
+    background-color: rgb(242, 242, 242);
+    color: rgb(20, 20, 20);
+    transition: 1s;
+}
+.D {
+    background-color: rgb(20, 20, 20);
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*https://www.youtube.com/watch?v=9H7fH9O_gc8*/
-/*https://www.youtube.com/watch?v=AO1XmKnNU-o*/
-
-
-
-
-/*Dark Mode Start*/
-.navbar.Active{
+/* Dark Mode Start*/
+/* .navbar.Active{
     background-color: white;
 }
 .sidebar.Active{
@@ -317,4 +542,10 @@
 .Toogle.Active{
     background-color: black;
 }
-/*Dark Mode End*/
+.Film_Ana_Sekme.Active{
+    background-color: rgb(255, 255, 255);
+}
+.BAŞLIK.Active{
+    color: black;
+} */
+/*Dark Mode End */

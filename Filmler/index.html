@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Film Projesi</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css    ">
     <script src="https://unpkg.com/scrollreveal"></script>
     
@@ -13,16 +13,11 @@
 </head>
 
 <body>
-    <div id="headermain" class="navbar">
-        <script>
-            window.onload = ready;
-            function ready(){
-                fetch("../header.shtml").then((res) => res.text()).then((text) => {
-                    document.querySelector("#headermain").innerHTML = text;
-                }).catch((e) => console.error(e));}
-        </script>
+    <div id="headermain" class="navbar Dark">
     </div>
-    <div style="background-color: black; color: white;" >
+
+
+    <div class="Dark" >
         <div class="movie_list_container">
             <p class="Movie_List_Title BAŞLIK Hilmi3">POPÜLER</p>
             <div class="Movie_List_Wrapper">
@@ -564,16 +559,14 @@
         </div>
     </div>
 </body>
-<script src="index1.js"></script>
-<script src="https://unpkg.com/scrollreveal"></script>
+<script src="../../essentials.js"></script>
+<!-- <script src="index1.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script> -->
 <script>
 
 const Top=document.querySelector(".Toogle");
 const İtems=document.querySelectorAll(".navbar,.sidebar,.menu-list-item,.Profil-Text-Span,.bi-caret-down-fill,.sidebar-i,.Genel-Alan,.Popüler,.One-Class,.Select,.Toogle-Ball,.Toogle");
 
-Top.addEventListener("click",function(){
-    İtems.forEach((items)=>items.classList.toggle("Active"))
-})
 
 
 ScrollReveal().reveal('.Hilmi' ,{delay:60});

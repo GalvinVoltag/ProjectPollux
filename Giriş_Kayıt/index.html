@@ -5,37 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Film Projesi</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css    ">
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../index.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css    "> -->
+    <!-- <script src="https://unpkg.com/scrollreveal"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
     
 
 </head>
 
-<body>
+<body style="background: url(../fotolar/filmkolaj.jpg);">
 
-    <div class="navbar ">
-        <div class="Logo Hilmi">
-            <h1>DiziFilmHD</h1>
-        </div>
-        <div class="Linkler Hilmi1">
-            <ul class="menu-list">
-                <li class="menu-list-item Ana_Sayfa">Ana Sayfa</li>
-                <li class="menu-list-item Filmler">Filmler</li>
-                <li class="menu-list-item Diziler">Diziler</li>
-                <li class="menu-list-item Hakkinda">Hakkında</li>
-            </ul>
-        </div>
-        <div class="Profil Hilmi2"> 
-            <span class="menu-list-item Giriş_Kayıt">Giriş/Kayıt</span>  
-            <div class="Toogle">
-                <i class="bi bi-moon-fill"></i>
-                <i class="bi bi-brightness-low-fill"></i>
-                <div class="Toogle-Ball"></div>
-            </div>
-        </div>
-    </div>
+    <div id="headermain" class="navbar Dark"></div>
 
     <!--
     <div class="Movie_List_Filter">
@@ -47,35 +27,50 @@
     -->
     
     <div class="wrapper">
-        <form action="">
+        <form action="" id="loginform">
             <h1>Giriş</h1>
             <div class="input-box">
-                <input type="text" placeholder="Kullanıcı Adı">
+                <input type="text" placeholder="Kullanıcı Adı" name="username" id="nme">
                 <i class='bx bxs-user'></i>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="Şifre">
+                <input type="password" placeholder="Şifre" name="password" id="pwd">
                 <i class='bx bxs-lock-alt' ></i>
             </div>
             
-            <button type="submit" class="btn">Giriş</button>
+            <button type="button" class="btn" id="sbt">Giriş</button>
 
             <div class="register-link">
-                <p>Hesabınız Yok Mu?? <a href="#" class="Kayıt_Ol">Kayıt Ol</a></p>
+                <p>Hesabınız Yok Mu?? <a href="Kayıt/index.html" class="Kayıt_Ol">Kayıt Ol</a></p>
             </div>
         </form>
     </div>
 
 </body>
-<script src="index1.js"></script>
-<script src="https://unpkg.com/scrollreveal"></script>
+
+<script src="../../essentials.js"></script>
+<!-- <script src="https://unpkg.com/scrollreveal"></script> -->
 <script>
 
-const Top=document.querySelector(".Toogle");
-const İtems=document.querySelectorAll(".navbar,.sidebar,.menu-list-item,.Profil-Text-Span,.bi-caret-down-fill,.sidebar-i,.Genel-Alan,.Popüler,.One-Class,.Select,.Toogle-Ball,.Toogle");
+const Sbt=document.querySelector('#sbt');
 
-Top.addEventListener("click",function(){
-    İtems.forEach((items)=>items.classList.toggle("Active"))
+Sbt.addEventListener("click", function() {
+    let name = document.querySelector("#nme").value;
+    let pwrd = document.querySelector("#pwd").value;
+    fetch("../Database/Userdata.json")
+    .then((res) => res.text())
+    .then((text) => {
+        var parsed = JSON.parse(text);
+        // console.log(parsed[0].username);
+        parsed.forEach(function(a) {
+            if (a.username == name) {
+                if (a.password == pwrd) alert("👌");
+                else alert("Yanlış şifre!");
+            }
+            else alert("Kullanıcı adı yanlış!");
+        })
+    })
+    .catch((e) => console.error(e));
 })
 
 

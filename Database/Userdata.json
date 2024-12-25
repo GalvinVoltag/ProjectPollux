@@ -1,11 +1,12 @@
 [
     {
-        "Hesap_isim": "Bumbum",
-        "Sifre": "1234",
-        "Likes": [
-            "RecepI"
+        "realname": "Vladimir Putin",
+        "username": "Bumbum",
+        "password": "1234",
+        "likes": [
+            "Recep"
         ],
-        "Dislike": [
+        "dislikes": [
             "KVI"
         ],
         "comments": [

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Film Projesi</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css    ">
     <script src="https://unpkg.com/scrollreveal"></script>
     
@@ -14,14 +14,7 @@
 
 <body>
 
-    <div id="headermain" class="navbar ">
-        <script>
-            window.onload = ready;
-            function ready(){
-                fetch("../header.shtml").then((res) => res.text()).then((text) => {
-                    document.querySelector("#headermain").innerHTML = text;
-                }).catch((e) => console.error(e));}
-        </script>
+    <div id="headermain" class="navbar Dark">
     </div>
 
     <!--
@@ -34,7 +27,7 @@
     -->
     <div class="Ana_Sekme">
         <div class="Hakkında_Üst">
-            <div class="Hakkında">
+            <div class="Hakkında Dark">
                 <div class="Hakkında1"><span style="color: rgb(255, 70, 70);">DiziFilmHD</span> Hakkında</div>
                 <p style="font-size: 1.5rem; margin-left: 3%; padding-top: 1rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore iusto nulla obcaecati neque temporibus? Perferendis maxime esse modi quis perspiciatis eligendi dolorum labore corrupti, fugit consequatur harum sed voluptate, ducimus vel dignissimos tempore natus saepe. Tempora porro unde facere sunt fugiat modi quae? Vero, deserunt aut quidem reiciendis iste sequi, corrupti dolorem beatae culpa ad unde voluptatem minus magni. In illum beatae unde nulla minus consequatur eos vel earum deserunt iusto facere eaque quas ad, amet, voluptates corporis est dolorum possimus excepturi repudiandae, aut tempore provident non deleniti. Sint voluptatibus distinctio, at aliquid fugiat doloremque dolor. Tempore praesentium blanditiis nostrum.</p>
                 <p style="font-size: 1.5rem; margin-left: 3%; padding-top: 1rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic a in nulla nisi reprehenderit recusandae nostrum ducimus, fugiat, facilis corporis autem sequi vel perspiciatis atque maxime pariatur dolorum dolores veritatis natus quam iusto voluptate animi. Repellendus vitae minima, omnis optio asperiores tempore! Eveniet officiis laborum dolorum magnam dolor harum sunt itaque iure amet nulla. Porro tempora similique eligendi eveniet necessitatibus dolorum explicabo cumque, quibusdam in aut eaque nisi. Corporis repellat earum eum debitis odio et in deleniti molestiae, nisi obcaecati mollitia saepe assumenda itaque fugit. Voluptates quaerat ullam veritatis quasi repudiandae doloribus? Hic sunt dicta nobis vero repudiandae, saepe ipsum ipsam quasi eius eaque dolores cupiditate voluptates ipsa odit dolor. Mollitia nisi soluta, aliquam ipsum nobis eius? Harum, adipisci dolorum.</p>
@@ -49,6 +42,7 @@
         </div>
     </div>
 </body>
+<script src="../../essentials.js"></script>
 <script src="index1.js"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
 <script>

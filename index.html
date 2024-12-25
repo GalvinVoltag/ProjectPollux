@@ -13,15 +13,7 @@
 
 <body style="background-color: black; overflow: hidden; ">
 
-    <div id="headermain" class="navbar">
-        <script>
-            window.onload = ready;
-            function ready(){
-                fetch("header.shtml").then((res) => res.text()).then((text) => {
-                    document.querySelector("#headermain").innerHTML = text;
-                }).catch((e) => console.error(e));}
-        </script>
-    </div>
+    <div id="headermain" class="navbar Dark"></div>
 
     <div class="Ana_Sayfa" >
         <div class="Ana_Resim">
@@ -75,15 +67,11 @@
     </div>
 </body>
 
+<script src="../../essentials.js"></script>
 <script>
 
 const Top=document.querySelector(".Toogle");
 const İtems=document.querySelectorAll(".navbar,.sidebar,.menu-list-item,.Profil-Text-Span,.bi-caret-down-fill,.sidebar-i,.Genel-Alan,.Popüler,.One-Class,.Select,.Toogle-Ball,.Toogle");
-
-function theme() {
-    İtems.forEach((items)=>items.classList.toggle("Active"));
-    document.querySelectorAll(".menu-list-item, .Toggle-Ball").forEach((items)=>items.classList.toggle("Active"));
-}
 
 function ActBtn(idx, sourcename, title = "TITLE") {
     var allcards = document.querySelectorAll(".CardBtn");
