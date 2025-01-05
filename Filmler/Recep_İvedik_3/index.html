@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Film Projesi</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../../index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css    ">
     <script src="https://unpkg.com/scrollreveal"></script>
 
@@ -14,27 +15,7 @@
 
 <body>
 
-    <div class="navbar ">
-        <div class="Logo Hilmi">
-            <h1>DiziFilmHD</h1>
-        </div>
-        <div class="Linkler Hilmi1">
-            <ul class="menu-list">
-                <li class="menu-list-item Ana_Sayfa">Ana Sayfa</li>
-                <li class="menu-list-item Filmler">Filmler</li>
-                <li class="menu-list-item Diziler">Diziler</li>
-                <li class="menu-list-item Hakkinda">Hakkında</li>
-            </ul>
-        </div>
-        <div class="Profil Hilmi2">
-            <span class="menu-list-item Giriş_Kayıt">Giriş/Kayıt</span>
-            <div class="Toogle">
-                <i class="bi bi-moon-fill"></i>
-                <i class="bi bi-brightness-low-fill"></i>
-                <div class="Toogle-Ball"></div>
-            </div>
-        </div>
-    </div>
+    <div id="headermain" class="navbar Dark"></div>
 
     <!--
     <div class="Movie_List_Filter">
@@ -44,7 +25,7 @@
         </select>
     </div>
     -->
-    <div class="Recep_İvedik_Tanıtım" style="padding-left: 29rem; padding-top: 2.5rem;">
+    <div style="background: url(../../Filmler/Recep_İvedik_3/fotolar/Adsız\ tasarım\ \(3\).png) center; height: 68vh; padding-left: 29rem; padding-top: 2.5rem;">
         <div class="En_Üst" style="display: flex;">
             <div>
                 <p style="font-size: 3rem; color: white;">Recep İvedik 3</p>
@@ -240,38 +221,58 @@
     </div>
 
     <div class="form-group" style=" margin-left: 20rem; margin-top: 2rem;">
-        <textarea style="font-size: large; width: 145vh; height: 20rem; background-color: black; color: white;" class="Form-Control" rows="10" placeholder="Mesajınız..."></textarea>
+        <textarea id="commentbox" style="font-size: large; width: 145vh; height: 20rem; background-color: black; color: white;" class="Form-Control" rows="10" placeholder="Mesajınız..."></textarea>
     </div>
 
-    <button class="Gönder" style="cursor: pointer; font-size: 2rem; margin-left: 20rem; width: 145vh; height: 5rem; background-color: black; color: white;">Gönder</button>
+    <button onclick="comment()" class="Gönder" style="cursor: pointer; font-size: 2rem; margin-left: 20rem; width: 145vh; height: 5rem; background-color: black; color: white;">Gönder</button>
 
-    <div style="display: flex; margin-left: 20rem; margin-top: 1rem; width: 145vh; height: 7rem; background-color: black;">
-        <div style="display: flex; padding-top: 1rem; padding-left: 1rem; ">
-            <div class="Yuvarlak2"></div>
-            <div style="color: white; padding-left: 0.5rem; ">
-                <p style="color: white; font-size: 1.2rem; font-weight: bold;">Hüseyin Hilmi Coşan</p>
-                <p style="color: white; font-size: large; padding-top: 0.3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, ipsa sequi corrupti voluptatibus nesciunt voluptatem.</p>
-                <div style=" padding-top: 0.3rem; display: flex;">
-                    <i style="height: 5rem; cursor: pointer;" class="bi bi-hand-thumbs-up a"></i>
-                    <p style="color: green;">0</p>
-                    <i style="padding-left: 0.2rem; height: 2rem; cursor: pointer;" class="bi bi-hand-thumbs-down b"></i>
-                    <p style="color: red;">0</p>
-                </div>
-            </div>
-        </div>
+    <div id="commentsection">
+
     </div>
+
 
     
     
     
 
 </body>
-<script src="index1.js"></script>
+<script src="../../essentials.js"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
 <script>
 
-    const Top = document.querySelector(".Toogle");
-    const İtems = document.querySelectorAll(".navbar,.sidebar,.menu-list-item,.Profil-Text-Span,.bi-caret-down-fill,.sidebar-i,.Genel-Alan,.Popüler,.One-Class,.Select,.Toogle-Ball,.Toogle");
+    function ready2() {
+        const comments = JSON.parse(localStorage.getItem("movies"))[0].Comments; //MANUAL
+        var finalhtml = "";
+        comments.forEach(function(e) {
+            finalhtml = finalhtml + `<div style="display: flex; margin-left: 20rem; margin-top: 1rem; width: 145vh; height: 7rem; background-color: black;">
+            <div style="display: flex; padding-top: 1rem; padding-left: 1rem; ">
+                <div class="Yuvarlak2"></div>
+                <div style="color: white; padding-left: 0.5rem; ">
+                    <p style="color: white; font-size: 1.2rem; font-weight: bold;">${e.host}</p>
+                    <p style="color: white; font-size: large; padding-top: 0.3rem;">${e.content}</p>
+                    <div style=" padding-top: 0.3rem; display: flex;">
+                        <i style="height: 5rem; cursor: pointer;" class="bi bi-hand-thumbs-up a"></i>
+                        <p style="color: green;">${e.dislikes}</p>
+                        <i style="padding-left: 0.2rem; height: 2rem; cursor: pointer;" class="bi bi-hand-thumbs-down b"></i>
+                        <p style="color: red;">${e.dislikes}</p>
+                    </div>
+                </div>
+                </div>
+            </div>`
+            document.querySelector("#commentsection").innerHTML = finalhtml;
+        })
+    }
+
+    function comment() {
+        const movies = JSON.parse(localStorage.getItem("movies"));
+        movies[0].Comments.push({"ID": 0,
+            "host": JSON.parse(localStorage.getItem("users"))[parseInt(localStorage.getItem("login"))].username,
+            "content": document.querySelector("#commentbox").value,
+            "likes": 0,
+            "dislikes": 0});
+        localStorage.setItem("movies", JSON.stringify(movies)); //MANUAL
+        ready2();
+    }
 
     Top.addEventListener("click", function () {
         İtems.forEach((items) => items.classList.toggle("Active"))

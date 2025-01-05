@@ -464,6 +464,21 @@ html::-webkit-scrollbar-thumb{/* "html::-webkit-scrollbar-thumb" özelliği ise 
 .btn_ripple:hover{
     opacity: 0.9;
 }
+
+.awu {
+    text-decoration: none;
+}
+.button {
+    background-color: #3333330d;
+    border-style: solid;
+    border-color: #51515120;
+    transition: 0.8s;
+}
+.button:hover {
+    background-color: #ff000022;
+    transition: 0.3s;
+}
+
 @keyframes ripple{
     0%{
         box-shadow: 0 0 0 0 #fff4, 0 0 0 0 #fff4;
@@ -502,6 +517,9 @@ html::-webkit-scrollbar-thumb{/* "html::-webkit-scrollbar-thumb" özelliği ise 
 }
 .D {
     background-color: rgb(20, 20, 20);
+}
+.Hid {
+    display: none;
 }
 
 

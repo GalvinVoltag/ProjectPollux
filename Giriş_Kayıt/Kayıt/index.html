@@ -56,21 +56,37 @@ Sbt.addEventListener("click", function() {
     let name = document.querySelector("#nme").value;
     let user = document.querySelector("#usr").value;
     let pwrd = document.querySelector("#pwd").value;
-    fetch("../../Database/Userdata.json")
-    .then((res) => res.text())
-    .then((text) => {
-        var parsed = JSON.parse(text);
-        parsed.forEach(function(a) {
-            if (a.username == user) {
-                alert("Kullanıcı adı zaten kullanılıyor!");
-            }
-            else if ( name == "" ) alert("İsim girişi zorunludur.");
-            else if ( pwrd == "" ) alert("Şifre girişi zorunludur.");
-            else if ( user == "" ) alert("Kullanıcı adı girişi zorunludur.");
-            else alert("👌");
-        })
-    })
-    .catch((e) => console.error(e));
+    if (name == "" || user == "" || pwrd == "") {
+        alert("Lütfen bütün kısımları doldurun.");
+        return;
+    }
+    var unm = false;
+    var mm = JSON.parse(localStorage.getItem("users"));
+    var idx = 0;
+    mm.forEach(a => {
+        if (a.username == user) {
+            unm = true;
+            return;
+        }
+        idx = idx+1;
+    });
+    if (!unm) {
+        var nn = {
+            "realname": name,
+            "username": user,
+            "password": pwrd,
+            "likes": [            ],
+            "dislikes": [            ],
+            "comments": [            ]
+        }
+        mm.push(nn);
+        localStorage.setItem("users", JSON.stringify(mm));
+        localStorage.setItem("login", idx);
+        window.location.replace("../../index.html");
+    }
+    else {
+        alert("Kullanıcı adı zaten alınmış!");
+    }
 })
 
 ScrollReveal().reveal('.Hilmi' ,{delay:60});

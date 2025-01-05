@@ -5,36 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Film Projesi</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../../index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css    ">
     <script src="https://unpkg.com/scrollreveal"></script>
     
 
 </head>
 
-<body>
+<body class="Dark">
 
-    <div class="navbar ">
-        <div class="Logo Hilmi">
-            <h1>DiziFilmHD</h1>
-        </div>
-        <div class="Linkler Hilmi1">
-            <ul class="menu-list">
-                <li class="menu-list-item Ana_Sayfa">Ana Sayfa</li>
-                <li class="menu-list-item Filmler">Filmler</li>
-                <li class="menu-list-item Diziler">Diziler</li>
-                <li class="menu-list-item Hakkinda">Hakkında</li>
-            </ul>
-        </div>
-        <div class="Profil Hilmi2"> 
-            <span class="menu-list-item Giriş_Kayıt">Giriş/Kayıt</span>  
-            <div class="Toogle">
-                <i class="bi bi-moon-fill"></i>
-                <i class="bi bi-brightness-low-fill"></i>
-                <div class="Toogle-Ball"></div>
-            </div>
-        </div>
-    </div>
+    <div id="headermain" class="navbar Dark"></div>
+
 
     <!--
     <div class="Movie_List_Filter">
@@ -45,29 +26,65 @@
     </div>
     -->
 
-    <div style="margin-top: 2rem; display: flex; justify-content: space-around;" class="Ana_Listem">
-        <div style="display: flex;">
-            <div style="cursor: pointer; background: url(/Listem/fotolar/Recep_İvedik_3.jpeg); background-size: 100% 100%; height: 15rem; width: 14rem; background-color: blue;"></div>
-            <div style="cursor: pointer; margin-top: 0.2rem; margin-left: 0.5rem;">
-                <p style="font-size: 2rem;">Recep İvedik 3</p>
-                <p style="font-size: 1.1rem; color: #a9a9a9;">2010 <span style="margin-left: 0.5rem;">7+</span><span style="margin-left: 0.5rem;">1h35m</span></p>
-            </div>
-        </div>
-        <div style="margin-top: 5rem;">
-            <i class="bi bi-trash çöp" style="font-size: 2.5rem; cursor: pointer;"></i>
-        </div>
-        
+    <div id="mylist">
+
     </div>
+
+    <!-- THE PROTOTYPE -->
+    <!-- <div>
+        <a href="" style="margin-top: 2rem; display: flex; justify-content:left; margin-left: 400px; margin-right: 440px; background-color: rgba(136, 136, 136, 0.16); cursor: pointer;" class="awu Dark">
+            <div>
+                <img src="../../fotolar/Recep_İvedik_3.jpeg" style=" background-size: 100% 100%; height: 15rem;"></div>
+                <div style="margin-top: 0.2rem; margin-left: 0.5rem;">
+                    <p style="font-size: 2rem;" id="title">Recep İvedik 3</p>
+                    <p style="font-size: 1.1rem; color: #a9a9a9;" id="year">2010 <span id="rating"><i class="bi bi-star-fill"></i>4.2 </span><span id="genre">Komedi</span></p>
+                </div>
+            </div>
+        </a>
+        <button type="button" style="margin-left: 1420px; margin-top: -400px; top: -60px; position: relative;" class="button">
+            <i class="bi-trash" style="font-size: 2.5rem;"></i>
+        </button>
+    </div> -->
+    
 
     
     
 </body>
-<script src="index1.js"></script>
-<script src="https://unpkg.com/scrollreveal"></script>
+<script src="../../essentials.js"></script>
 <script>
 
-const Top=document.querySelector(".Toogle");
-const İtems=document.querySelectorAll(".navbar,.sidebar,.menu-list-item,.Profil-Text-Span,.bi-caret-down-fill,.sidebar-i,.Genel-Alan,.Popüler,.One-Class,.Select,.Toogle-Ball,.Toogle");
+// window.onload = why;
+function ready2(){
+    fetch("../../Database/Data.json").then((res) => res.text()).then((text) => {
+        const movies = JSON.parse(text);
+        const user = JSON.parse(localStorage.getItem("users"))[parseInt(localStorage.getItem("login"))];
+        var list;
+        if (user.hasOwnProperty("list")) {
+            list = user.list;
+        } else {
+            user.list = [];
+        }
+        var finallist = ``;
+        list.forEach(function(e) {
+            const badass = movies[e];
+            finallist = finallist + `<div>
+                <a href="" style="margin-top: 2rem; display: flex; justify-content:left; margin-left: 400px; margin-right: 430px; background-color: rgba(136, 136, 136, 0.16); cursor: pointer;" class="awu Dark">
+                    <div>
+                        <img src="${badass.Cover}" style=" background-size: 100% 100%; height: 15rem;"></div>
+                        <div style="margin-top: 0.2rem; margin-left: 0.5rem;">
+                            <p style="font-size: 2rem;" id="title">${badass.Title}</p>
+                            <p style="font-size: 1.1rem; color: #a9a9a9;" id="year">${badass.Year} <span id="rating"><i class="bi bi-star-fill"></i>${badass.Rating} </span><span id="genre">${badass.Genre}</span></p>
+                        </div>
+                    </div>
+                </a>
+                <button type="button" style="margin-left: 1420px; margin-top: -400px; top: -60px; position: relative;" class="button">
+                    <i class="bi-trash" style="font-size: 2.5rem;"></i>
+                </button>
+            </div>`
+            document.querySelector("#mylist").innerHTML=finallist;
+        })
+    }).catch((e) => console.error(e));
+}
 
 Top.addEventListener("click",function(){
     İtems.forEach((items)=>items.classList.toggle("Active"))

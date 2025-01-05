@@ -57,20 +57,30 @@ const Sbt=document.querySelector('#sbt');
 Sbt.addEventListener("click", function() {
     let name = document.querySelector("#nme").value;
     let pwrd = document.querySelector("#pwd").value;
-    fetch("../Database/Userdata.json")
-    .then((res) => res.text())
-    .then((text) => {
-        var parsed = JSON.parse(text);
-        // console.log(parsed[0].username);
-        parsed.forEach(function(a) {
-            if (a.username == name) {
-                if (a.password == pwrd) alert("👌");
-                else alert("Yanlış şifre!");
+    var mm = JSON.parse( localStorage.getItem("users"));
+    var unm, pwm = false;
+    var idx = 0;
+    mm.forEach(a => {
+        if (a.username == name) {
+            if (a.password == pwrd) {
+                pwm = true;
+                return
             }
-            else alert("Kullanıcı adı yanlış!");
-        })
-    })
-    .catch((e) => console.error(e));
+            else unm = true;
+            return
+        }
+        idx=idx+1;
+    });
+    if (pwm) {
+        // alert("👌");
+        localStorage.setItem("login", idx);
+        document.querySelector("#namearea").innerHTML = name;
+        document.querySelector("#namearea").classList.remove("Hid");
+        document.querySelector("#loginarea").classList.add("Hid");
+        window.location.replace("../../index.html");
+    }
+    else if (!pwm && unm) alert("Yanlış şifre!");
+    else alert("Yanlış kullanıcı adı!");
 })
 
 

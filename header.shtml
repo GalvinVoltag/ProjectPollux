@@ -12,7 +12,8 @@
     </div>
     
     <div class="Profil Hilmi2"> 
-        <a href="../Giriş_Kayıt/index.html" class="menu-list-item Dark">Giriş/Kayıt</a>
+        <a href="../Giriş_Kayıt/index.html" class="menu-list-item Dark" id="loginarea">Giriş/Kayıt</a>
+        <a href="../Listem/index.html" class="menu-list-item Dark Hid" id="namearea">USERNAME</a>
         <div class="Toogle " onclick="theme()">
             <i class="bi-moon-fill"></i>
             <i class="bi-brightness-low-fill"></i>
