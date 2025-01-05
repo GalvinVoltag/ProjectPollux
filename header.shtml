@@ -4,16 +4,16 @@
 
     <div class="">
         <ul class="menu-list">
-            <a href="../index.html" class="menu-list-item Dark">Ana Sayfa</a>
-            <a href="../Filmler/index.html" class="menu-list-item Dark ">Filmler</a>
-            <a href="../Diziler/index.html" class="menu-list-item Dark">Diziler</a>
-            <a href="../Hakkında/index.html" class="menu-list-item Dark">Hakkında</a>
+            <a href="../../../index.html" class="menu-list-item Dark">Ana Sayfa</a>
+            <a href="../../../Filmler/index.html" class="menu-list-item Dark ">Filmler</a>
+            <a href="../../../Diziler/index.html" class="menu-list-item Dark">Diziler</a>
+            <a href="../../../Hakkında/index.html" class="menu-list-item Dark">Hakkında</a>
         </ul>
     </div>
     
     <div class="Profil Hilmi2"> 
-        <a href="../Giriş_Kayıt/index.html" class="menu-list-item Dark" id="loginarea">Giriş/Kayıt</a>
-        <a href="../Listem/index.html" class="menu-list-item Dark Hid" id="namearea">USERNAME</a>
+        <a href="../../Giriş_Kayıt/index.html" class="menu-list-item Dark" id="loginarea">Giriş/Kayıt</a>
+        <div id="namearea" class="Dark Hid"><a href="../../Listem/index.html" class="menu-list-item"> USERNAME </a></div>
         <div class="Toogle " onclick="theme()">
             <i class="bi-moon-fill"></i>
             <i class="bi-brightness-low-fill"></i>

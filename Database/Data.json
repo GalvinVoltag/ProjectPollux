@@ -7,6 +7,9 @@
         "Genre": "Komedi",
         "Year": "2010",
         "Rating": "4.2",
+        "Link": "../../Filmler/Recep_İvedik_3/index.html",
+        "Likes": 505,
+        "Dislikes": 2,
         "Comments": [
             {
                 "ID": 0,
@@ -19,12 +22,15 @@
     },
     {
         "ID": "Kurtlar",
-        "Title": "KURTLAR VADİSİ IRAK",
+        "Title": "KURTLAR VADİSİ",
         "Trailer": "fotolar/Kurtlar Vadisi Irak.mp4",
-        "Cover": "../../fotolar/Kurtlar_Vadisi_Irak.jpg",
+        "Cover": "../../../Diziler/Kurtlar_Vadisi/fotolar/Kurtlar-vadisi-eski.jpg",
         "Genre": "Aksiyon",
         "Year": "2006",
         "Rating": "5.7",
+        "Link": "../../Diziler/Kurtlar_Vadisi_Sezon1/index.html",
+        "Likes": 546,
+        "Dislikes": 4,
         "Comments": [
             
         ]
@@ -37,6 +43,9 @@
         "Genre": "Dram",
         "Year": "2010",
         "Rating": "7.0",
+        "Link": "../../Filmler/Recep_İvedik_3/index.html",
+        "Likes": 5005,
+        "Dislikes": 20,
         "Comments": [
             
         ]
@@ -49,6 +58,9 @@
         "Genre": "Dram",
         "Year": "1997",
         "Rating": "7.9",
+        "Link": "../../Filmler/Recep_İvedik_3/index.html",
+        "Likes": 50,
+        "Dislikes": 1,
         "Comments": [
             
         ]
@@ -61,6 +73,24 @@
         "Genre": "Dram",
         "Year": "1994",
         "Rating": "9.3",
+        "Link": "../../Filmler/Esaretin_Bedeli/index.html",
+        "Likes": 605,
+        "Dislikes": 7,
+        "Comments": [
+            
+        ]
+    },
+    {
+        "ID": "Ezel",
+        "Title": "EZEL",
+        "Trailer": "fotolar/Esaretin_bedeli.mp4",
+        "Cover": "../../../Diziler/Ezel/fotolar/ezel.jpg",
+        "Genre": "Dram",
+        "Year": "2009",
+        "Rating": "8.4",
+        "Link": "../../../Diziler/Ezel/Ezel_Sezon_1/index.html",
+        "Likes": 666,
+        "Dislikes": 777,
         "Comments": [
             
         ]

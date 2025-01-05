@@ -1,14 +1,14 @@
 //The HEADER
 window.onload = ready;
 function ready(){
-    fetch("../../header.shtml").then((res) => res.text()).then((text) => {
+    fetch("../../../header.shtml").then((res) => res.text()).then((text) => {
         document.querySelector("#headermain").innerHTML = text;
         if (localStorage.getItem("darkmode") == "false"){
             theme();
             localStorage.setItem("darkmode", "false");}
             if (localStorage.getItem("login") != "-1"){
                 var name = JSON.parse(localStorage.getItem("users"))[parseInt(localStorage.getItem("login"))].username;
-                document.querySelector("#namearea").innerHTML = name;
+                document.querySelector("#namearea").innerHTML = `<button type="submit" onclick="C.unlogin()" class="button">↩</button> <a href="../../Listem/index.html" class="menu-list-item"> ${name} </a>`;
                 document.querySelector("#namearea").classList.remove("Hid");
                 document.querySelector("#loginarea").classList.add("Hid");
             }
@@ -39,7 +39,7 @@ const C = {
     },
     update_movie_database() {
         var movies = [];
-        fetch("../Database/Data.json")
+        fetch("../../Database/Data.json")
         .then((res) => res.text())
         .then((text) => {
             var parsed = JSON.parse(text);
@@ -79,5 +79,8 @@ const C = {
     },
     unlogin() {
         localStorage.setItem("login", "-1");
+        document.querySelector("#namearea").classList.remove("Hid");
+        document.querySelector("#loginarea").classList.add("Hid");
+        window.location.reload();
     }
 };

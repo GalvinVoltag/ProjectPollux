@@ -33,7 +33,7 @@
                     
                 </div>
                 <button class="btn_ripple Hilmi5">
-                    <i class="fa fa-play"></i>
+                    <a href="../../Filmler/Recep_İvedik_3/index.html" id="playbutton" style="text-decoration: none; color: white;" class="fa fa-play"></a>
                 </button>
             </div>
             <div class="Card">
@@ -88,10 +88,11 @@ function ActBtn(idx, sourcename, title = "TITLE") {
         var index = parseInt(idx) - 1;
         var parsed = JSON.parse(text);
         document.querySelector('#Mov').src = parsed[index].Trailer;
-        document.querySelector("#title").innerHTML = parsed[index].Title;
         document.querySelector('#year').innerHTML = parsed[index].Year;
+        document.querySelector("#title").innerHTML = parsed[index].Title;
         document.querySelector('#genre').innerHTML = parsed[index].Genre;
         document.querySelector('#rating').innerHTML = parsed[index].Rating;
+        document.querySelector('#playbutton').href = parsed[index].Link;
     })
     .catch((e) => console.error(e));
     var thetits = document.querySelector('.Film_Yazı');

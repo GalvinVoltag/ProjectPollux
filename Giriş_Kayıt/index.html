@@ -64,12 +64,12 @@ Sbt.addEventListener("click", function() {
         if (a.username == name) {
             if (a.password == pwrd) {
                 pwm = true;
-                return
+                return;
             }
             else unm = true;
-            return
+            return;
         }
-        idx=idx+1;
+        if (!pwm) idx=idx+1;
     });
     if (pwm) {
         // alert("👌");

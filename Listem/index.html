@@ -27,7 +27,7 @@
     -->
 
     <div id="mylist">
-
+        <h1 style="display: flex; justify-content: center; font-size: 50px; margin-top: 300px; color: gray; user-select: none;">Burada henüz birşeyler yok.</h1><br><a href="../../../index.html" style="justify-content: center; display: flex; font-size: 20px; color: blue; text-decoration: none;">ana sayfa</a> 
     </div>
 
     <!-- THE PROTOTYPE -->
@@ -53,8 +53,10 @@
 <script src="../../essentials.js"></script>
 <script>
 
-// window.onload = why;
 function ready2(){
+    if (JSON.parse(localStorage.getItem("login")) == -1) {
+        window.location = "../../../index.html";
+    }
     fetch("../../Database/Data.json").then((res) => res.text()).then((text) => {
         const movies = JSON.parse(text);
         const user = JSON.parse(localStorage.getItem("users"))[parseInt(localStorage.getItem("login"))];
@@ -65,10 +67,13 @@ function ready2(){
             user.list = [];
         }
         var finallist = ``;
+        var idx = 0;
         list.forEach(function(e) {
             const badass = movies[e];
-            finallist = finallist + `<div>
-                <a href="" style="margin-top: 2rem; display: flex; justify-content:left; margin-left: 400px; margin-right: 430px; background-color: rgba(136, 136, 136, 0.16); cursor: pointer;" class="awu Dark">
+            finallist = finallist + `
+            <div id ="listider">
+                <div>
+                <a href="${badass.Link}" style="margin-top: 2rem; display: flex; justify-content:left; margin-left: 400px; margin-right: 430px; background-color: rgba(136, 136, 136, 0.16); cursor: pointer;" class="awu Dark">
                     <div>
                         <img src="${badass.Cover}" style=" background-size: 100% 100%; height: 15rem;"></div>
                         <div style="margin-top: 0.2rem; margin-left: 0.5rem;">
@@ -77,13 +82,25 @@ function ready2(){
                         </div>
                     </div>
                 </a>
-                <button type="button" style="margin-left: 1420px; margin-top: -400px; top: -60px; position: relative;" class="button">
-                    <i class="bi-trash" style="font-size: 2.5rem;"></i>
-                </button>
+                <button onclick="deletelistitem(${idx})" id="deletebutton" style="font-size: 2.5rem; margin-left: 1430px; margin-top: -400px; top: -60px; position: relative;" class="bi-trash button"></button>
+                </div>
             </div>`
             document.querySelector("#mylist").innerHTML=finallist;
+            idx = idx + 1;
         })
     }).catch((e) => console.error(e));
+}
+
+function deletelistitem(index) {
+    const login = parseInt(localStorage.getItem("login"));
+    var users = JSON.parse(localStorage.getItem("users"));
+    // console.log(users);
+    // var list = users[login].list;
+    users[login].list.splice(index, 1);
+    const pn=event.target.parentNode;
+    localStorage.setItem("users", JSON.stringify(users))
+    console.log(JSON.parse(localStorage.getItem("users")));
+    pn.remove();
 }
 
 Top.addEventListener("click",function(){

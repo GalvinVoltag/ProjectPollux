@@ -6,35 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Film Projesi</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../../index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css    ">
     <script src="https://unpkg.com/scrollreveal"></script>
 
 
 </head>
 
-<body>
+<body class="Dark">
 
-    <div class="navbar ">
-        <div class="Logo Hilmi">
-            <h1>DiziFilmHD</h1>
-        </div>
-        <div class="Linkler Hilmi1">
-            <ul class="menu-list">
-                <li class="menu-list-item Ana_Sayfa">Ana Sayfa</li>
-                <li class="menu-list-item Filmler">Filmler</li>
-                <li class="menu-list-item Diziler">Diziler</li>
-                <li class="menu-list-item Hakkinda">Hakkında</li>
-            </ul>
-        </div>
-        <div class="Profil Hilmi2">
-            <span class="menu-list-item Giriş_Kayıt">Giriş/Kayıt</span>
-            <div class="Toogle">
-                <i class="bi bi-moon-fill"></i>
-                <i class="bi bi-brightness-low-fill"></i>
-                <div class="Toogle-Ball"></div>
-            </div>
-        </div>
-    </div>
+    <div id="headermain" class="navbar Dark"></div> 
 
     <!--
     <div class="Movie_List_Filter">
@@ -195,19 +176,18 @@
 
     
 
-    <div style="position: relative;  background-color: #e67e22; margin-left: 20rem; margin-top: 2rem; height: 48rem; width: 86rem;">
-        <video  class="video-bg" controls>
+    <div style="position: relative; margin-left: 20rem; margin-top: 2rem; height: 48rem; width: 86rem; margin-bottom: 60px;">
+        <video controls style="width: 1440px;">
             <source class="Hilmi11" src="/Filmler/Esaretin_Bedeli/fotolar/Esaretin_bedeli.mp4" type="video/mp4">
         </video>
-        
-
     </div>
     
     <div style=" margin-top: 2rem;">
         <div>
             <div style="display: flex;">
                 <div>
-                    <button class="button_save" style="margin-left: 20rem;  cursor: pointer; border-radius: 15px; display: flex; padding: 15px 30px; border-color: rgb(255, 70, 70); background-color: rgb(255, 70, 70); color: white;">
+                    <!-- REPLACE -->
+                    <button id="saver" onclick="savemovie()" class="button_save" style="margin-left: 20rem;  cursor: pointer; border-radius: 15px; display: flex; padding: 15px 30px; border-color: rgb(255, 70, 70); background-color: rgb(255, 70, 70); color: white;">
                         <img style="margin-top: 1px; height: 1rem;" src="/Filmler/Recep_İvedik_3/fotolar/save-instagram.png" alt="">
                         <p style="font-weight: bold; margin-left: 0.3rem; font-size: large;">Kaydet</p>
                     </button>
@@ -215,10 +195,10 @@
                 
                 <div style="margin-top: 0.7rem;">
                     <div style="font-size: 1.5rem; margin-left: 3rem;  display: flex;">
-                        <i style="height: 5rem; cursor: pointer;" class="bi bi-hand-thumbs-up a"></i>
-                        <p style="color: green;">0</p>
-                        <i style="padding-left: 0.2rem; height: 2rem; cursor: pointer;" class="bi bi-hand-thumbs-down b"></i>
-                        <p style="color: red;">0</p>
+                        <i onclick="likemovie()" id="movielike" style="display: flex; height: 5rem; cursor: pointer;" class="bi bi-hand-thumbs-up a">
+                        <p style="color: green;">0</p></i>
+                        <i onclick="dislikemovie()" id="moviedislike" style="display: flex; padding-left: 0.2rem; height: 2rem; cursor: pointer;" class="bi bi-hand-thumbs-down b">
+                        <p style="color: red;">0</p></i>
                     </div>
                 </div>
                 
@@ -239,25 +219,14 @@
     </div>
 
     <div class="form-group" style=" margin-left: 20rem; margin-top: 2rem;">
-        <textarea style="font-size: large; width: 145vh; height: 20rem; background-color: black; color: white;" class="Form-Control" rows="10" placeholder="Mesajınız..."></textarea>
+        <textarea id="commentbox" style="font-size: large; width: 145vh; height: 20rem; background-color: black; color: white;" class="Form-Control" rows="10" placeholder="Mesajınız..."></textarea>
     </div>
 
-    <button class="Gönder" style="cursor: pointer; font-size: 2rem; margin-left: 20rem; width: 145vh; height: 5rem; background-color: black; color: white;">Gönder</button>
+    <button onclick="comment()" id="commenter" class="Gönder" style="cursor: pointer; font-size: 2rem; margin-left: 20rem; width: 145vh; height: 5rem; background-color: black; color: white;">Gönder</button>
 
-    <div style="display: flex; margin-left: 20rem; margin-top: 1rem; width: 145vh; height: 7rem; background-color: black;">
-        <div style="display: flex; padding-top: 1rem; padding-left: 1rem; ">
-            <div class="Yuvarlak2"></div>
-            <div style="color: white; padding-left: 0.5rem; ">
-                <p style="color: white; font-size: 1.2rem; font-weight: bold;">Hüseyin Hilmi Coşan</p>
-                <p style="color: white; font-size: large; padding-top: 0.3rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, ipsa sequi corrupti voluptatibus nesciunt voluptatem.</p>
-                <div style=" padding-top: 0.3rem; display: flex;">
-                    <i style="height: 5rem; cursor: pointer;" class="bi bi-hand-thumbs-up a"></i>
-                    <p style="color: green;">0</p>
-                    <i style="padding-left: 0.2rem; height: 2rem; cursor: pointer;" class="bi bi-hand-thumbs-down b"></i>
-                    <p style="color: red;">0</p>
-                </div>
-            </div>
-        </div>
+    <!-- REPLACE -->
+    <div id="commentsection">
+
     </div>
 
     
@@ -265,37 +234,110 @@
     
 
 </body>
-<script src="index1.js"></script>
+<script src="../../essentials.js"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
 <script>
+    const movieID = 4; //MANUAL
 
-    const Top = document.querySelector(".Toogle");
-    const İtems = document.querySelectorAll(".navbar,.sidebar,.menu-list-item,.Profil-Text-Span,.bi-caret-down-fill,.sidebar-i,.Genel-Alan,.Popüler,.One-Class,.Select,.Toogle-Ball,.Toogle");
+    function ready2() {
+        const users = JSON.parse(localStorage.getItem("users"));
+        const login = parseInt(localStorage.getItem("login"));
+        const comments = JSON.parse(localStorage.getItem("movies"))[movieID].Comments;
+        var finalhtml = "";
+        var idx = 0;
+        var movie = JSON.parse(localStorage.getItem("movies"))[movieID];
+        document.querySelector("#movielike").innerHTML = `<p style="color: green;">${movie.Likes}</p>`;
+        document.querySelector("#moviedislike").innerHTML = `<p style="color: red;">${movie.Dislikes}</p>`;
+        comments.forEach(function(e) {
+            finalhtml = `<div style="display: flex; margin-left: 20rem; margin-top: 1rem; width: 145vh; height: 7rem; background-color: black;">
+                <div style="display: flex; padding-top: 1rem; padding-left: 1rem; ">
+                    <div class="Yuvarlak2"></div>
+                    <div style="color: white; padding-left: 0.5rem; ">
+                        <p style="color: white; font-size: 1.2rem; font-weight: bold;">${e.host}</p>
+                        <p style="color: white; font-size: large; padding-top: 0.3rem;">${e.content}</p>
+                        <div style=" padding-top: 0.3rem; display: flex;">
+                            <i onclick="liked(${idx})" style="display: flex; height: 5rem; cursor: pointer;" class="bi bi-hand-thumbs-up a">
+                                <p style="color: green;">${e.likes}</p></i>
+                                    <i  onclick="disliked(${idx})" style="display: flex; padding-left: 0.2rem; height: 2rem; cursor: pointer;" class="bi bi-hand-thumbs-down b">
+                                <p style="color: red;">${e.dislikes}</p></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>` + finalhtml;
+            document.querySelector("#commentsection").innerHTML = finalhtml;
+            idx = idx + 1;
+        })
+        if (login == -1) {
+            document.querySelector("#commenter").style = "font-size: 2rem; margin-left: 20rem; width: 145vh; height: 5rem; background-color: rgb(33, 33, 33); color: gray;";
+            document.querySelector("#commenter").innerHTML = "Göndermek için giriş yapın";
+            document.querySelector("#commenter").classList.add("disabled");
+        }
+        else {
+            if (users[login].list.includes(movieID)) {
+                document.querySelector("#saver").style = "margin-left: 20rem;  cursor: pointer; border-radius: 15px; display: flex; padding: 15px 38px; border-color: rgb(70, 255, 70); background-color: rgb(70, 255, 70); color: white;";
+                document.querySelector("#saver").innerHTML = "Kaydedildi";
+            }
+        }
+    }
 
-    Top.addEventListener("click", function () {
-        İtems.forEach((items) => items.classList.toggle("Active"))
-    })
+    function disliked(index) {
+        var movies = JSON.parse(localStorage.getItem("movies"));
+        movies[movieID].Comments[index].dislikes = movies[movieID].Comments[index].dislikes + 1;
+        localStorage.setItem("movies", JSON.stringify(movies));
+        event.target.innerHTML = `<p style="color: red;">${movies[movieID].Comments[index].dislikes}</p>`;
+        event.target.style = "color:red; margin-left: 4px; display: flex; height: 5rem; cursor: pointer;"
+    }
+    function liked(index) {
+        var movies = JSON.parse(localStorage.getItem("movies"));
+        movies[movieID].Comments[index].likes = movies[movieID].Comments[index].likes + 1;
+        localStorage.setItem("movies", JSON.stringify(movies));
+        event.target.innerHTML = `<p style="color: green;">${movies[movieID].Comments[index].likes}</p>`;
+        event.target.style = "color:green; display: flex; height: 5rem; cursor: pointer;"
+    }
+    function likemovie() {
+        var movies = JSON.parse(localStorage.getItem("movies"));
+        movies[movieID].Likes = movies[movieID].Likes + 1;
+        localStorage.setItem("movies", JSON.stringify(movies));
+        event.target.innerHTML = `<p style="color: green;">${movies[movieID].Likes}</p>`;
+        event.target.style = "color:green; display: flex; height: 5rem; cursor: pointer;"
+    }
+    function dislikemovie() {
+        var movies = JSON.parse(localStorage.getItem("movies"));
+        movies[movieID].Dislikes = movies[movieID].Dislikes + 1;
+        localStorage.setItem("movies", JSON.stringify(movies));
+        event.target.innerHTML = `<p style="color: red;">${movies[movieID].Dislikes}</p>`;
+        event.target.style = "color:red; display: flex; height: 5rem; cursor: pointer;"
+    }
 
-    
+    function savemovie() {
+        var users = JSON.parse(localStorage.getItem("users"));
+        var login = parseInt(localStorage.getItem("login"));
+        if (login == -1) {
+            alert("Kaydetmek için lütfen giriş yapın.");
+            document.querySelector("#saver").style = "margin-left: 20rem; border-radius: 15px; display: flex; padding: 15px 30px; border-color: rgb(99, 99, 99); background-color: rgb(70, 70, 70); color: white;";
+            document.querySelector("#saver").classList.toggle("disabled");
+        }
+        if (users[login].list == null) users[login].list = [];
+        if (!users[login].list.includes(movieID))
+        {
+            users[login].list.push(movieID);
+            localStorage.setItem("users", JSON.stringify(users));
+        }
+        document.querySelector("#saver").style = "margin-left: 20rem;  cursor: pointer; border-radius: 15px; display: flex; padding: 15px 38px; border-color: rgb(70, 255, 70); background-color: rgb(70, 255, 70); color: white;";
+        document.querySelector("#saver").innerHTML = "Kaydedildi";
+    }
 
-    document.querySelector(".Ana_Sayfa").addEventListener("click",function(){
-    window.location.href="http://127.0.0.1:5500/index.html"
-})
-document.querySelector(".Filmler").addEventListener("click",function(){
-    window.location.href="http://127.0.0.1:5500/Filmler/index.html"
-})
-document.querySelector(".Diziler").addEventListener("click",function(){
-    window.location.href="http://127.0.0.1:5500/Diziler/index.html"
-})
-document.querySelector(".Hakkinda").addEventListener("click",function(){
-    window.location.href="http://127.0.0.1:5500/Hakk%C4%B1nda/index.html"
-})
-
-    
-
-
-
-
+    function comment() {
+        const movies = JSON.parse(localStorage.getItem("movies"));
+        movies[movieID].Comments.push({"ID": 0,
+            "host": JSON.parse(localStorage.getItem("users"))[parseInt(localStorage.getItem("login"))].username,
+            "content": document.querySelector("#commentbox").value,
+            "likes": 0,
+            "dislikes": 0});
+        localStorage.setItem("movies", JSON.stringify(movies)); //MANUAL
+        document.querySelector("#commentbox").value = "";
+        ready2();
+    }
 
 </script>
 
